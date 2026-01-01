@@ -2082,7 +2082,7 @@ img {
 }
 
 @media (max-width: 768px) {
-    /* Solution 1: Reduce font size and adjust spacing */
+    /* Reduce font size and adjust spacing */
     .logo-text {
         font-size: 1.1rem !important;
         letter-spacing: -0.5px;
