@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Transparency Statement - MarketBrainers{% endblock %}
+
+{% block content %}
+<section class="legal-section">
+    <div class="container">
+        <h1 class="section-title">Transparency Statement</h1>
+        
+        <div class="legal-content">
+            <h2>Our Commitment to Transparency</h2>
+            
+            <p>At MarketBrainers, we believe in complete transparency in our operations, partnerships, and campaign execution. This document outlines our transparency principles and practices.</p>
+            
+            <h3>1. Campaign Reporting</h3>
+            <ul>
+                <li>Real-time campaign performance dashboards</li>
+                <li>Detailed platform-by-platform reporting</li>
+                <li>Monthly comprehensive performance reviews</li>
+                <li>Transparent communication of challenges and solutions</li>
+            </ul>
+            
+            <h3>2. Partnership Disclosure</h3>
+            <ul>
+                <li>Clear identification of all platform partners</li>
+                <li>No hidden or undisclosed affiliations</li>
+                <li>Transparent fee structures and commission models</li>
+                <li>Independent platform selection based on campaign needs</li>
+            </ul>
+            
+            <h3>3. Data Handling</h3>
+            <ul>
+                <li>Secure client data protection protocols</li>
+                <li>No unauthorized data sharing</li>
+                <li>GDPR and data privacy compliance</li>
+                <li>Transparent data usage policies</li>
+            </ul>
+            
+            <h3>4. Campaign Coordination</h3>
+            <ul>
+                <li>Clear communication channels</li>
+                <li>Regular status updates</li>
+                <li>Transparent campaign adjustments</li>
+                <li>Open discussion of strategy changes</li>
+            </ul>
+            
+            <h3>5. Platform Balance</h3>
+            <p>We maintain platform independence and do not favor any specific platforms. Campaign placement decisions are based on:</p>
+            <ul>
+                <li>Target audience alignment</li>
+                <li>Campaign objectives</li>
+                <li>Performance data and analytics</li>
+                <li>Client-specific requirements</li>
+            </ul>
+            
+            <div class="legal-note">
+                <p><strong>Note:</strong> All campaign coordination is handled privately, but our processes remain transparent to our clients.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .legal-section {
+        padding: 5rem 2rem;
+        background: var(--black-primary);
+    }
+    
+    .legal-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 3rem;
+        background: rgba(26, 26, 26, 0.8);
+        border-radius: 15px;
+        border: 1px solid rgba(255, 215, 0, 0.1);
+    }
+    
+    .legal-content h2 {
+        color: var(--gold-primary);
+        margin-bottom: 1.5rem;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+    }
+    
+    .legal-content h3 {
+        color: var(--white);
+        margin: 2rem 0 1rem;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+    }
+    
+    .legal-content p {
+        color: var(--gray);
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+    
+    .legal-content ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .legal-content li {
+        padding: 0.8rem 0;
+        color: var(--gray);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding-left: 1.5rem;
+        position: relative;
+    }
+    
+    .legal-content li:before {
+        content: '•';
+        color: var(--gold-primary);
+        position: absolute;
+        left: 0;
+    }
+    
+    .legal-note {
+        background: rgba(255, 215, 0, 0.05);
+        border-left: 3px solid var(--gold-primary);
+        padding: 1.5rem;
+        border-radius: 0 8px 8px 0;
+        margin-top: 2rem;
+    }
+    
+    .legal-note p {
+        color: var(--gray);
+        margin: 0;
+    }
+</style>
+{% endblock %}

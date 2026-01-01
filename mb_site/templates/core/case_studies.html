@@ -1,0 +1,521 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block content %}
+<section class="case-studies-section">
+    <div class="container">
+        <h1 class="section-title">Proof of Work</h1>
+        <p class="section-subtitle">Real results from real campaigns</p>
+        
+        <div class="case-studies-grid">
+            <!-- Case Study 1 -->
+            <div class="case-study-card animate-on-scroll">
+                <div class="case-study-image">
+                    <img src="{% static 'images/cases/case1.jpg' %}" alt="DeFi Protocol Launch">
+                </div>
+                <div class="case-study-content">
+                    <div class="case-study-category">DeFi Protocol</div>
+                    <h3>Multi-Chain DEX Launch Campaign</h3>
+                    <div class="case-study-metrics">
+                        <div class="metric">
+                            <div class="metric-value">+350%</div>
+                            <div class="metric-label">Volume Increase</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">50+</div>
+                            <div class="metric-label">Platform Integrations</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">25K+</div>
+                            <div class="metric-label">Community Members</div>
+                        </div>
+                    </div>
+                    <p class="case-study-description">
+                        Full-scale launch campaign across 50+ platforms including top exchanges, 
+                        aggregators, and community channels. Achieved trending status on 8 major platforms.
+                    </p>
+                    <div class="case-study-platforms">
+                        <span class="platform-tag">CMC</span>
+                        <span class="platform-tag">CoinGecko</span>
+                        <span class="platform-tag">Binance</span>
+                        <span class="platform-tag">MEXC</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Case Study 2 -->
+            <div class="case-study-card animate-on-scroll">
+                <div class="case-study-image">
+                    <img src="{% static 'images/cases/case2.jpg' %}" alt="NFT Marketplace Growth">
+                </div>
+                <div class="case-study-content">
+                    <div class="case-study-category">NFT Marketplace</div>
+                    <h3>Global Visibility Expansion</h3>
+                    <div class="case-study-metrics">
+                        <div class="metric">
+                            <div class="metric-value">10M+</div>
+                            <div class="metric-label">Ad Impressions</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">+200%</div>
+                            <div class="metric-label">User Growth</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">30+</div>
+                            <div class="metric-label">KOL Campaigns</div>
+                        </div>
+                    </div>
+                    <p class="case-study-description">
+                        Strategic multi-platform campaign combining influencer marketing, 
+                        PR distribution, and targeted advertising across global markets.
+                    </p>
+                    <div class="case-study-platforms">
+                        <span class="platform-tag">Twitter</span>
+                        <span class="platform-tag">TikTok</span>
+                        <span class="platform-tag">YouTube</span>
+                        <span class="platform-tag">Medium</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Case Study 3 -->
+            <div class="case-study-card animate-on-scroll">
+                <div class="case-study-image">
+                    <img src="{% static 'images/cases/case3.jpg' %}" alt="GameFi Project">
+                </div>
+                <div class="case-study-content">
+                    <div class="case-study-category">GameFi Project</div>
+                    <h3>Community Building & Retention</h3>
+                    <div class="case-study-metrics">
+                        <div class="metric">
+                            <div class="metric-value">100K+</div>
+                            <div class="metric-label">Active Users</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">85%</div>
+                            <div class="metric-label">Retention Rate</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">24/7</div>
+                            <div class="metric-label">Community Management</div>
+                        </div>
+                    </div>
+                    <p class="case-study-description">
+                        Comprehensive community management and engagement strategy 
+                        with gamified retention systems and 24/7 moderation teams.
+                    </p>
+                    <div class="case-study-platforms">
+                        <span class="platform-tag">Discord</span>
+                        <span class="platform-tag">Telegram</span>
+                        <span class="platform-tag">Twitter</span>
+                        <span class="platform-tag">Reddit</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Case Study 4 -->
+            <div class="case-study-card animate-on-scroll">
+                <div class="case-study-image">
+                    <img src="{% static 'images/cases/case4.jpg' %}" alt="Enterprise Blockchain">
+                </div>
+                <div class="case-study-content">
+                    <div class="case-study-category">Enterprise Blockchain</div>
+                    <h3>Corporate Credibility Campaign</h3>
+                    <div class="case-study-metrics">
+                        <div class="metric">
+                            <div class="metric-value">50+</div>
+                            <div class="metric-label">PR Publications</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">$2M+</div>
+                            <div class="metric-label">Media Value</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">15</div>
+                            <div class="metric-label">Industry Partners</div>
+                        </div>
+                    </div>
+                    <p class="case-study-description">
+                        Tier-1 media placement and corporate credibility building across 
+                        finance, technology, and business publications.
+                    </p>
+                    <div class="case-study-platforms">
+                        <span class="platform-tag">Bloomberg</span>
+                        <span class="platform-tag">CNBC</span>
+                        <span class="platform-tag">Forbes</span>
+                        <span class="platform-tag">WSJ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Metrics Dashboard -->
+        <div class="metrics-dashboard animate-on-scroll">
+            <h2 class="section-title">Campaign Performance Metrics</h2>
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <div class="dashboard-value">500+</div>
+                    <div class="dashboard-label">Campaigns Delivered</div>
+                    <div class="dashboard-progress">
+                        <div class="progress-bar" style="width: 100%"></div>
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="dashboard-value">99%</div>
+                    <div class="dashboard-label">Client Satisfaction</div>
+                    <div class="dashboard-progress">
+                        <div class="progress-bar" style="width: 99%"></div>
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="dashboard-value">10B+</div>
+                    <div class="dashboard-label">Total Impressions</div>
+                    <div class="dashboard-progress">
+                        <div class="progress-bar" style="width: 100%"></div>
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="dashboard-value">250K+</div>
+                    <div class="dashboard-label">Community Members Managed</div>
+                    <div class="dashboard-progress">
+                        <div class="progress-bar" style="width: 100%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Testimonials -->
+        <div class="testimonials-section animate-on-scroll">
+            <h2 class="section-title">Client Testimonials</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"MarketBrainers transformed our project visibility overnight. Their multi-platform approach delivered results we couldn't achieve internally."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JD</div>
+                        <div class="author-info">
+                            <div class="author-name">John Doe</div>
+                            <div class="author-role">CEO, DeFi Protocol</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The level of professionalism and platform access is unmatched. They delivered on every promise and exceeded our expectations."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SJ</div>
+                        <div class="author-info">
+                            <div class="author-name">Sarah Johnson</div>
+                            <div class="author-role">CMO, NFT Platform</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"From strategy to execution, their team handled everything seamlessly. Our community grew 300% in the first month."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MR</div>
+                        <div class="author-info">
+                            <div class="author-name">Michael Roberts</div>
+                            <div class="author-role">Founder, GameFi Project</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cta-container" style="text-align: center; margin-top: 4rem;">
+            <a href="{% url 'contact' %}" class="btn-gold btn-xlarge">
+                <i class="fas fa-chart-line"></i> Start Your Success Story
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .case-studies-section {
+        padding: 5rem 2rem;
+        background: var(--black-primary);
+    }
+    
+    .case-studies-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+    
+    .case-study-card {
+        background: rgba(26, 26, 26, 0.8);
+        border-radius: 15px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 215, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .case-study-card:hover {
+        transform: translateY(-10px);
+        border-color: var(--gold-primary);
+        box-shadow: 0 15px 40px rgba(255, 215, 0, 0.1);
+    }
+    
+    .case-study-image {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+    }
+    
+    .case-study-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+    
+    .case-study-card:hover .case-study-image img {
+        transform: scale(1.05);
+    }
+    
+    .case-study-content {
+        padding: 2rem;
+    }
+    
+    .case-study-category {
+        display: inline-block;
+        background: rgba(255, 215, 0, 0.1);
+        color: var(--gold-primary);
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+    
+    .case-study-content h3 {
+        color: var(--white);
+        margin-bottom: 1.5rem;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 1.3rem;
+    }
+    
+    .case-study-metrics {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .case-study-metrics .metric {
+        text-align: center;
+        padding: 1rem;
+        background: rgba(255, 215, 0, 0.05);
+        border-radius: 10px;
+    }
+    
+    .case-study-metrics .metric-value {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--gold-primary);
+        margin-bottom: 0.3rem;
+    }
+    
+    .case-study-metrics .metric-label {
+        font-size: 0.8rem;
+        color: var(--gray);
+    }
+    
+    .case-study-description {
+        color: var(--gray);
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        font-size: 0.95rem;
+    }
+    
+    .case-study-platforms {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .platform-tag {
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--gray);
+        padding: 0.3rem 0.8rem;
+        border-radius: 15px;
+        font-size: 0.8rem;
+    }
+    
+    .metrics-dashboard {
+        margin-top: 5rem;
+        padding: 3rem;
+        background: rgba(255, 215, 0, 0.05);
+        border-radius: 15px;
+        border: 1px solid rgba(255, 215, 0, 0.1);
+    }
+    
+    .dashboard-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .dashboard-card {
+        text-align: center;
+        padding: 2rem;
+        background: rgba(26, 26, 26, 0.8);
+        border-radius: 15px;
+        border: 1px solid rgba(255, 215, 0, 0.1);
+    }
+    
+    .dashboard-value {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--gold-primary);
+        margin-bottom: 0.5rem;
+    }
+    
+    .dashboard-label {
+        color: var(--gray);
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .dashboard-progress {
+        height: 6px;
+        background: rgba(255, 215, 0, 0.1);
+        border-radius: 3px;
+        overflow: hidden;
+    }
+    
+    .progress-bar {
+        height: 100%;
+        background: var(--gradient-gold);
+        border-radius: 3px;
+    }
+    
+    .testimonials-section {
+        margin-top: 5rem;
+    }
+    
+    .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+    
+    .testimonial-card {
+        background: rgba(26, 26, 26, 0.8);
+        border-radius: 15px;
+        padding: 2rem;
+        border: 1px solid rgba(255, 215, 0, 0.1);
+    }
+    
+    .testimonial-content p {
+        color: var(--gray);
+        font-style: italic;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+    
+    .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .author-avatar {
+        width: 50px;
+        height: 50px;
+        background: var(--gradient-gold);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--black-primary);
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+    
+    .author-name {
+        color: var(--white);
+        font-weight: 600;
+        margin-bottom: 0.3rem;
+    }
+    
+    .author-role {
+        color: var(--gray);
+        font-size: 0.9rem;
+    }
+    
+    @media (max-width: 768px) {
+        .case-study-metrics {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .dashboard-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .case-study-metrics {
+            grid-template-columns: 1fr;
+        }
+        
+        .dashboard-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .case-studies-grid {
+            grid-template-columns: 1fr !important;
+        }
+        
+        .case-study-card {
+            margin-bottom: 2rem;
+        }
+        
+        .case-study-metrics {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 10px;
+        }
+        
+        .dashboard-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 1rem;
+        }
+        
+        .testimonials-grid {
+            grid-template-columns: 1fr !important;
+        }
+        
+        .testimonial-card {
+            padding: 1.5rem !important;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .case-study-metrics {
+            grid-template-columns: 1fr !important;
+        }
+        
+        .dashboard-grid {
+            grid-template-columns: 1fr !important;
+        }
+    }
+</style>
+{% endblock %}

@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Terms of Service - MarketBrainers{% endblock %}
+
+{% block content %}
+<section class="legal-section">
+    <div class="container">
+        <h1 class="section-title">Terms of Service</h1>
+        
+        <div class="legal-content">
+            <div class="last-updated">Last Updated: {% now "F j, Y" %}</div>
+            
+            <h2>1. Agreement to Terms</h2>
+            <p>By accessing or using MarketBrainers services, you agree to be bound by these Terms of Service. If you disagree with any part of these terms, you may not access our services.</p>
+            
+            <h2>2. Services Description</h2>
+            <p>MarketBrainers provides digital marketing services including but not limited to:</p>
+            <ul>
+                <li>Platform integrations and listings</li>
+                <li>Trending and visibility campaigns</li>
+                <li>Advertising inventory management</li>
+                <li>Influencer and KOL campaigns</li>
+                <li>Press and PR distribution</li>
+                <li>Community management and operations</li>
+                <li>Strategic consulting and analytics</li>
+            </ul>
+            
+            <h2>3. Eligibility</h2>
+            <p>Our services are available only to individuals and entities who:</p>
+            <ul>
+                <li>Are 18 years of age or older</li>
+                <li>Have legal capacity to enter into binding contracts</li>
+                <li>Are engaging in legitimate business activities</li>
+                <li>Comply with all applicable laws and regulations</li>
+            </ul>
+            
+            <h2>4. Campaign Coordination</h2>
+            <p>All campaign coordination is handled privately through secure channels. We maintain confidentiality of campaign details and client information.</p>
+            
+            <h2>5. Payment Terms</h2>
+            <ul>
+                <li>Payment is required as specified in individual service agreements</li>
+                <li>We accept various payment methods including cryptocurrency</li>
+                <li>Refund policies are outlined in specific service agreements</li>
+                <li>Late payments may result in campaign suspension</li>
+            </ul>
+            
+            <h2>6. Intellectual Property</h2>
+            <p>All content, trademarks, and data associated with our services are the property of MarketBrainers or our licensors. You may not use our intellectual property without prior written consent.</p>
+            
+            <h2>7. Client Responsibilities</h2>
+            <ul>
+                <li>Provide accurate and complete information</li>
+                <li>Comply with all platform terms where we execute campaigns</li>
+                <li>Maintain legal compliance for your business</li>
+                <li>Respect campaign confidentiality agreements</li>
+            </ul>
+            
+            <h2>8. Limitation of Liability</h2>
+            <p>MarketBrainers is not liable for indirect, incidental, or consequential damages arising from service use. Our liability is limited to the amount paid for services in the preceding 12 months.</p>
+            
+            <h2>9. Termination</h2>
+            <p>We reserve the right to terminate services for violations of these terms, illegal activities, or failure to meet payment obligations.</p>
+            
+            <h2>10. Changes to Terms</h2>
+            <p>We may modify these terms at any time. Continued use of services constitutes acceptance of modified terms.</p>
+            
+            <h2>11. Governing Law</h2>
+            <p>These terms are governed by applicable laws. Disputes will be resolved through arbitration or appropriate legal channels.</p>
+            
+            <h2>12. Contact Information</h2>
+            <p>For questions about these Terms of Service, contact us through our official channels.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .legal-section {
+        padding: 5rem 2rem;
+        background: var(--black-primary);
+    }
+    
+    .legal-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 3rem;
+        background: rgba(26, 26, 26, 0.8);
+        border-radius: 15px;
+        border: 1px solid rgba(255, 215, 0, 0.1);
+    }
+    
+    .last-updated {
+        color: var(--gold-primary);
+        font-weight: 600;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+    }
+    
+    .legal-content h2 {
+        color: var(--gold-primary);
+        margin: 2rem 0 1rem;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 1.3rem;
+    }
+    
+    .legal-content p {
+        color: var(--gray);
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+    
+    .legal-content ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .legal-content li {
+        padding: 0.8rem 0;
+        color: var(--gray);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding-left: 1.5rem;
+        position: relative;
+    }
+    
+    .legal-content li:before {
+        content: '•';
+        color: var(--gold-primary);
+        position: absolute;
+        left: 0;
+    }
+</style>
+{% endblock %}

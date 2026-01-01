@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Sitemap - MarketBrainers{% endblock %}
+
+{% block content %}
+<section class="sitemap-section">
+    <div class="container">
+        <h1 class="section-title">Sitemap</h1>
+        
+        <div class="sitemap-grid">
+            <div class="sitemap-category">
+                <h3><i class="fas fa-home"></i> Main Pages</h3>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'services' %}">Services</a></li>
+                    <li><a href="{% url 'packages' %}">Packages</a></li>
+                    <li><a href="{% url 'platforms' %}">Platforms</a></li>
+                    <li><a href="{% url 'case_studies' %}">Case Studies</a></li>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="sitemap-category">
+                <h3><i class="fas fa-balance-scale"></i> Legal & Compliance</h3>
+                <ul>
+                    <li><a href="{% url 'transparency' %}">Transparency Statement</a></li>
+                    <li><a href="{% url 'data_handling' %}">Data Handling</a></li>
+                    <li><a href="{% url 'disclaimer' %}">18+ Client Assurance</a></li>
+                    <li><a href="{% url 'affiliations' %}">No Fake Partnerships</a></li>
+                    <li><a href="{% url 'privacy' %}">Privacy Policy</a></li>
+                    <li><a href="{% url 'terms' %}">Terms of Service</a></li>
+                    <li><a href="{% url 'sitemap' %}">Sitemap</a></li>
+                </ul>
+            </div>
+            
+            <div class="sitemap-category">
+                <h3><i class="fas fa-cogs"></i> Services</h3>
+                <ul>
+                    <li>Integrations & Listings</li>
+                    <li>Trending & Visibility</li>
+                    <li>Advertising Inventory</li>
+                    <li>Influencer & KOL Campaigns</li>
+                    <li>Press & PR Distribution</li>
+                    <li>Community & Operations</li>
+                    <li>Strategy, Creative & Analytics</li>
+                </ul>
+            </div>
+            
+            <div class="sitemap-category">
+                <h3><i class="fas fa-plug"></i> Platform Categories</h3>
+                <ul>
+                    <li>Aggregators & Terminals</li>
+                    <li>Exchanges & Protocols</li>
+                    <li>Wallet & Swap Ecosystem</li>
+                    <li>Voting & Tracking Networks</li>
+                    <li>Advertising Networks</li>
+                    <li>Press & Media Channels</li>
+                    <li>Offline & Experiential Media</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

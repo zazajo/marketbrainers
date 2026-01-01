@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-content">
+        <h1 class="hero-title">MARKETBRAINERS</h1>
+        <p class="hero-subtitle">Global Marketing Powerhouse</p>
+        <div class="hero-tagline">One engine. Infinite reach. Real visibility. Private coordination.</div>
+        
+        <div class="hero-actions">
+            <a href="{% url 'contact' %}" class="btn-gold btn-large">
+                <i class="fas fa-rocket"></i> Get Started (DM for campaigns)
+            </a>
+            <a href="{% url 'services' %}" class="btn-outline btn-large">
+                <i class="fas fa-list"></i> View Services
+            </a>
+            <a href="{% url 'contact' %}" class="btn-outline btn-large">
+                <i class="fas fa-calendar-check"></i> Book Integration
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Trust Banners -->
+<section class="trust-section">
+    <div class="trust-banners">
+        <h4>Trusted By Leading Platforms</h4>
+        <div class="trust-categories">
+            <div class="trust-category">
+                <i class="fas fa-project-diagram"></i>
+                <span>Aggregators</span>
+            </div>
+            <div class="trust-category">
+                <i class="fas fa-exchange-alt"></i>
+                <span>Exchanges</span>
+            </div>
+            <div class="trust-category">
+                <i class="fas fa-wallet"></i>
+                <span>Wallets</span>
+            </div>
+            <div class="trust-category">
+                <i class="fas fa-vote-yea"></i>
+                <span>Voting Networks</span>
+            </div>
+            <div class="trust-category">
+                <i class="fas fa-ad"></i>
+                <span>Ad Networks</span>
+            </div>
+            <div class="trust-category">
+                <i class="fas fa-newspaper"></i>
+                <span>PR Media</span>
+            </div>
+            <div class="trust-category">
+                <i class="fas fa-bullhorn"></i>
+                <span>OOH Media</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Live Stats -->
+<section class="stats-section">
+    <div class="container">
+        <h2 class="section-title">Global Reach in Real Time</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value" data-target="250">0</div>
+                <div class="stat-label">Campaigns Delivered</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" data-target="1500">0</div>
+                <div class="stat-label">Active Communities</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" data-target="500">0</div>
+                <div class="stat-label">Integrations</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" data-target="10">0<span>B+</span></div>
+                <div class="stat-label">Ad Impressions</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Intro Graphic -->
+<section class="graphic-section">
+    <div class="container">
+        <div class="graphic-container">
+            <img src="{% static 'images/features/data-visualization.png' %}" alt="MarketBrainers Engine" class="graphic-image">
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const counters = document.querySelectorAll('.stat-value');
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const increment = target / 100;
+            let current = 0;
+            
+            const updateCounter = () => {
+                if (current < target) {
+                    current += increment;
+                    if (current > target) current = target;
+                    counter.innerHTML = Math.floor(current) + (counter.innerHTML.includes('B+') ? '<span>B+</span>' : '');
+                    setTimeout(updateCounter, 20);
+                }
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                    updateCounter();
+                    observer.unobserve(counter);
+                }
+            });
+            
+            observer.observe(counter);
+        });
+    });
+</script>
+{% endblock %}

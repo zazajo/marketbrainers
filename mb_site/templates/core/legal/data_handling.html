@@ -1,0 +1,181 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Data Handling & Campaign Execution - MarketBrainers{% endblock %}
+
+{% block content %}
+<section class="legal-section">
+    <div class="container">
+        <h1 class="section-title">Data Handling & Campaign Execution Policy</h1>
+        
+        <div class="legal-content">
+            <div class="policy-intro">
+                <i class="fas fa-database"></i>
+                <h3>Secure Data Management</h3>
+                <p>Our comprehensive approach to data protection and campaign execution</p>
+            </div>
+            
+            <h2>1. Data Collection Principles</h2>
+            <p>We follow strict data minimization principles, collecting only what is necessary for:</p>
+            <ul>
+                <li><strong>Service Delivery:</strong> Information required for campaign execution</li>
+                <li><strong>Communication:</strong> Contact details for campaign coordination</li>
+                <li><strong>Compliance:</strong> Data needed for legal and regulatory requirements</li>
+                <li><strong>Improvement:</strong> Anonymous data for service enhancement</li>
+            </ul>
+            
+            <h2>2. Data Security Measures</h2>
+            <p>We implement multi-layered security including:</p>
+            <ul>
+                <li><strong>Encryption:</strong> End-to-end encryption for all sensitive data</li>
+                <li><strong>Access Controls:</strong> Role-based access with strict permissions</li>
+                <li><strong>Secure Storage:</strong> Enterprise-grade secure data storage</li>
+                <li><strong>Regular Audits:</strong> Quarterly security assessments and penetration testing</li>
+                <li><strong>Employee Training:</strong> Regular security awareness training</li>
+            </ul>
+            
+            <h2>3. Campaign Data Management</h2>
+            <p>Campaign data is managed through:</p>
+            <ul>
+                <li><strong>Segregated Environments:</strong> Separate data environments for each client</li>
+                <li><strong>Real-time Monitoring:</strong> 24/7 monitoring of campaign data flows</li>
+                <li><strong>Backup Systems:</strong> Regular encrypted backups with multiple redundancy</li>
+                <li><strong>Access Logging:</strong> Comprehensive access logs with audit trails</li>
+                <li><strong>Data Retention:</strong> Clear retention policies and secure deletion</li>
+            </ul>
+            
+            <h2>4. Third-Party Data Handling</h2>
+            <p>When working with third-party platforms:</p>
+            <ul>
+                <li><strong>Vetting Process:</strong> Thorough assessment of platform security</li>
+                <li><strong>Data Minimization:</strong> Sharing only essential data with platforms</li>
+                <li><strong>Contractual Safeguards:</strong> Data protection agreements with all partners</li>
+                <li><strong>Monitoring:</strong> Regular review of partner security practices</li>
+                <li><strong>Exit Procedures:</strong> Secure data retrieval and deletion procedures</li>
+            </ul>
+            
+            <h2>5. Incident Response</h2>
+            <p>Our incident response protocol includes:</p>
+            <ul>
+                <li><strong>Immediate Containment:</strong> Rapid response to contain any incidents</li>
+                <li><strong>Investigation:</strong> Thorough investigation of security events</li>
+                <li><strong>Notification:</strong> Prompt notification to affected parties where required</li>
+                <li><strong>Remediation:</strong> Comprehensive remediation and prevention measures</li>
+                <li><strong>Documentation:</strong> Detailed incident documentation and reporting</li>
+            </ul>
+            
+            <h2>6. Campaign Execution Security</h2>
+            <p>Campaign execution follows strict security protocols:</p>
+            <ul>
+                <li><strong>Secure Communication:</strong> Encrypted channels for all campaign coordination</li>
+                <li><strong>Verification Processes:</strong> Multi-factor verification for campaign changes</li>
+                <li><strong>Approval Workflows:</strong> Structured approval processes for campaign actions</li>
+                <li><strong>Monitoring:</strong> Real-time monitoring of campaign execution</li>
+                <li><strong>Documentation:</strong> Comprehensive campaign documentation and logging</li>
+            </ul>
+            
+            <h2>7. Data Retention & Deletion</h2>
+            <p>Our data lifecycle management includes:</p>
+            <ul>
+                <li><strong>Retention Periods:</strong> Clear retention periods for different data types</li>
+                <li><strong>Secure Deletion:</strong> Certified data destruction methods</li>
+                <li><strong>Client Requests:</strong> Procedures for handling data deletion requests</li>
+                <li><strong>Archival:</strong> Secure archival of legally required data</li>
+                <li><strong>Verification:</strong> Verification of successful data deletion</li>
+            </ul>
+            
+            <h2>8. Compliance Framework</h2>
+            <p>We maintain compliance with:</p>
+            <ul>
+                <li><strong>GDPR:</strong> European data protection regulations</li>
+                <li><strong>CCPA:</strong> California consumer privacy requirements</li>
+                <li><strong>Industry Standards:</strong> Marketing and advertising regulations</li>
+                <li><strong>International Standards:</strong> Cross-border data transfer frameworks</li>
+                <li><strong>Platform Requirements:</strong> Individual platform data policies</li>
+            </ul>
+            
+            <h2>9. Client Data Rights</h2>
+            <p>We facilitate client data rights including:</p>
+            <ul>
+                <li><strong>Access:</strong> Providing access to client data upon request</li>
+                <li><strong>Correction:</strong> Procedures for correcting inaccurate data</li>
+                <li><strong>Portability:</strong> Data portability in standard formats</li>
+                <li><strong>Restriction:</strong> Processing restrictions where applicable</li>
+                <li><strong>Objection:</strong> Right to object to data processing</li>
+            </ul>
+            
+            <h2>10. Continuous Improvement</h2>
+            <p>We continuously enhance our data handling through:</p>
+            <ul>
+                <li><strong>Regular Reviews:</strong> Quarterly review of data handling practices</li>
+                <li><strong>Technology Updates:</strong> Implementing latest security technologies</li>
+                <li><strong>Training:</strong> Ongoing staff training and certification</li>
+                <li><strong>Industry Collaboration:</strong> Participation in security communities</li>
+                <li><strong>Client Feedback:</strong> Incorporating client feedback into improvements</li>
+            </ul>
+            
+            <div class="security-badge">
+                <i class="fas fa-shield-check"></i>
+                <h4>Our Security Commitment</h4>
+                <p>We are committed to maintaining the highest standards of data security and campaign execution integrity.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% block extra_css %}
+<style>
+    .policy-intro {
+        background: rgba(255, 215, 0, 0.1);
+        border: 2px solid var(--gold-primary);
+        border-radius: 15px;
+        padding: 2rem;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    
+    .policy-intro i {
+        font-size: 3rem;
+        color: var(--gold-primary);
+        margin-bottom: 1rem;
+        display: block;
+    }
+    
+    .policy-intro h3 {
+        color: var(--white);
+        margin-bottom: 0.5rem;
+    }
+    
+    .policy-intro p {
+        color: var(--gray);
+    }
+    
+    .security-badge {
+        background: rgba(26, 26, 26, 0.9);
+        border: 2px solid var(--gold-primary);
+        border-radius: 15px;
+        padding: 2rem;
+        text-align: center;
+        margin-top: 3rem;
+    }
+    
+    .security-badge i {
+        font-size: 2.5rem;
+        color: var(--gold-primary);
+        margin-bottom: 1rem;
+        display: block;
+    }
+    
+    .security-badge h4 {
+        color: var(--white);
+        margin-bottom: 1rem;
+    }
+    
+    .security-badge p {
+        color: var(--gray);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+</style>
+{% endblock %}
+{% endblock %}

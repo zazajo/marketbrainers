@@ -1,0 +1,179 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}MarketBrainers - Unified Marketing Engine{% endblock %}</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{% static 'images/logos/abstract-logo2.png' %}">
+    
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <img src="{% static 'images/logos/abstract-logo2.png' %}" alt="MarketBrainers Logo" class="preloader-logo-img">
+            </div>
+            <div class="preloader-text">
+                MARKET<span>BRAINERS</span>
+            </div>
+            <div class="preloader-progress">
+                <div class="preloader-progress-bar"></div>
+            </div>
+            <div class="preloader-percentage">0%</div>
+            <div class="preloader-status">Initializing unified engine...</div>
+        </div>
+    </div>
+    
+    <!-- CEO/CFO Banner -->
+    <div class="leadership-banner">
+        <div class="container">
+            <span class="ceo-name">Philip Emmanuel — Chief Executive Officer (CEO)</span>
+            <span class="cfo-name">Nwabuko Emmanuel — Co-Founder (CFO)</span>
+            <span class="ceo-name">Joseph Edward — Lead-Developer (LD)</span>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="{% url 'home' %}" class="logo">
+                <div class="logo-container">
+                    {% comment %} <div class="logo-icon">
+                        <i class="fas fa-brain"></i>
+                    </div> {% endcomment %}
+                    <div class="logo-text-container">
+                        <span class="logo-text">MARKET<span class="logo-highlight">BRAINERS</span></span>
+                    </div>
+                </div>
+            </a>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="{% url 'home' %}" class="nav-link">Home</a>
+                <a href="{% url 'services' %}" class="nav-link">Services</a>
+                <a href="{% url 'packages' %}" class="nav-link">Packages</a>
+                <a href="{% url 'platforms' %}" class="nav-link">Platforms</a>
+                <a href="{% url 'case_studies' %}" class="nav-link">Case Studies</a>
+                <a href="{% url 'about' %}" class="nav-link">About Us</a>
+                <div class="nav-actions">
+                    <a href="{% url 'contact' %}" class="btn-gold">Start Campaign</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="{% static 'images/logos/abstract-logo2.png' %}" alt="MarketBrainers" class="footer-logo-img">
+                    <div class="footer-logo-text">
+                        <span>MARKET<span class="logo-highlight">BRAINERS</span></span>
+                        <p class="footer-tagline">One engine. Infinite reach. Real visibility. Private coordination.</p>
+                    </div>
+                </div>
+                <div class="mission-statement">
+                    <p><strong>Mission:</strong> To unify digital reach, community power, trend intelligence, and global visibility into one powerful marketing engine that launches and scales brands worldwide.</p>
+                </div>
+                <div class="contact-note">
+                    <p><i class="fas fa-comment-dots"></i> All enquiries handled via DM</p>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-heading">Core Values</h3>
+                <ul class="values-list">
+                    <li>Transparency</li>
+                    <li>No forced affiliations</li>
+                    <li>Platform balance</li>
+                    <li>Global execution</li>
+                    <li>Private campaign coordination</li>
+                    <li>Unified marketing infrastructure</li>
+                    <li>18+ client focus</li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-heading">Community Channels</h3>
+                <div class="community-channels">
+                    <a href="#" class="channel-link"><i class="fab fa-telegram"></i> Telegram</a>
+                    <a href="#" class="channel-link"><i class="fab fa-discord"></i> Discord</a>
+                    <a href="#" class="channel-link"><i class="fab fa-twitter"></i> X</a>
+                    <a href="#" class="channel-link"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="#" class="channel-link"><i class="fab fa-medium"></i> Medium</a>
+                    <a href="#" class="channel-link"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="#" class="channel-link"><i class="fas fa-globe"></i> Base App</a>
+                </div>
+                
+                <div class="contact-cta">
+                    <h4>Start Your Campaign</h4>
+                    <a href="{% url 'contact' %}" class="btn-gold btn-small">Use Our Typeform</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-heading">Legal & Trust</h3>
+                <div class="legal-links">
+                    <a href="{% url 'transparency' %}">Transparency Statement</a>
+                    <a href="{% url 'data_handling' %}">Data Handling & Campaign Execution</a>
+                    <a href="{% url 'disclaimer' %}">18+ Client Assurance</a>
+                    <a href="{% url 'affiliations' %}">No Fake or Forced Partnerships</a>
+                    <a href="{% url 'privacy' %}">Privacy Policy</a>
+                    <a href="{% url 'terms' %}">Terms of Service</a>
+                </div>
+                
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Secure Campaign Coordination</span>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-globe"></i>
+                        <span>Global Execution</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; {% now "Y" %} MarketBrainers. All rights reserved.</p>
+            <p class="disclaimer">All integration and campaigns are privately coordinated. No platform dominance or shady affiliations.</p>
+            <div class="footer-links">
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'sitemap' %}">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="{% static 'js/main.js' %}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Disclaimer & 18+ Client Assurance - MarketBrainers{% endblock %}
+
+{% block content %}
+<section class="legal-section">
+    <div class="container">
+        <h1 class="section-title">Disclaimer & 18+ Client Assurance</h1>
+        
+        <div class="legal-content">
+            <div class="disclaimer-warning">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h3>Important Legal Disclaimer</h3>
+                <p>Please read this disclaimer carefully before using our services.</p>
+            </div>
+            
+            <h2>1. 18+ Client Assurance</h2>
+            <p>MarketBrainers provides services exclusively to:</p>
+            <ul>
+                <li>Individuals 18 years of age or older</li>
+                <li>Legally registered business entities</li>
+                <li>Authorized representatives of legitimate organizations</li>
+                <li>Parties engaging in legal business activities</li>
+            </ul>
+            
+            <p><strong>Verification:</strong> We reserve the right to request age verification and business legitimacy documentation.</p>
+            
+            <h2>2. No Financial Advice</h2>
+            <p>MarketBrainers does not provide:</p>
+            <ul>
+                <li>Financial advice or recommendations</li>
+                <li>Investment guidance or analysis</li>
+                <li>Trading signals or market predictions</li>
+                <li>Securities or investment recommendations</li>
+                <li>Tax, legal, or accounting advice</li>
+            </ul>
+            
+            <h2>3. Campaign Performance Disclaimer</h2>
+            <p>While we strive for optimal results, we cannot guarantee:</p>
+            <ul>
+                <li>Specific performance metrics or ROI</li>
+                <li>Platform ranking positions or visibility levels</li>
+                <li>Community growth or engagement rates</li>
+                <li>Media coverage or press results</li>
+                <li>Market response or audience reception</li>
+            </ul>
+            
+            <h2>4. Platform Risks</h2>
+            <p>Digital marketing involves inherent risks including:</p>
+            <ul>
+                <li>Platform algorithm changes</li>
+                <li>Market volatility and trends</li>
+                <li>Regulatory changes affecting platforms</li>
+                <li>Technical issues or platform downtime</li>
+                <li>Competitive landscape shifts</li>
+            </ul>
+            
+            <h2>5. Third-Party Platforms</h2>
+            <p>We work with various platforms, but we are not responsible for:</p>
+            <ul>
+                <li>Platform terms of service changes</li>
+                <li>Platform listing decisions or rejections</li>
+                <li>Platform technical issues or bugs</li>
+                <li>Platform policy enforcement actions</li>
+                <li>Platform fee structures or changes</li>
+            </ul>
+            
+            <h2>6. Client Responsibilities</h2>
+            <p>Clients are responsible for:</p>
+            <ul>
+                <li>Legal compliance of their business</li>
+                <li>Accuracy of provided information</li>
+                <li>Following platform rules and regulations</li>
+                <li>Securing necessary licenses and permissions</li>
+                <li>Managing their own legal and tax obligations</li>
+            </ul>
+            
+            <h2>7. Limitation of Liability</h2>
+            <p>To the maximum extent permitted by law, MarketBrainers is not liable for:</p>
+            <ul>
+                <li>Indirect, incidental, or consequential damages</li>
+                <li>Loss of profits, revenue, or business opportunities</li>
+                <li>Data loss or corruption</li>
+                <li>Third-party actions or platform decisions</li>
+                <li>Market conditions or economic factors</li>
+            </ul>
+            
+            <h2>8. No Guarantees</h2>
+            <p>All services are provided "as is" without warranties of any kind. We make no guarantees regarding:</p>
+            <ul>
+                <li>Service availability or uptime</li>
+                <li>Campaign results or outcomes</li>
+                <li>Platform acceptance or approval</li>
+                <li>Market response or reception</li>
+                <li>Return on investment or profitability</li>
+            </ul>
+            
+            <h2>9. Regulatory Compliance</h2>
+            <p>Clients must ensure their activities comply with:</p>
+            <ul>
+                <li>Local, national, and international laws</li>
+                <li>Financial regulations and securities laws</li>
+                <li>Advertising and marketing regulations</li>
+                <li>Data protection and privacy laws</li>
+                <li>Industry-specific regulations</li>
+            </ul>
+            
+            <h2>10. Acknowledgment</h2>
+            <p>By using our services, you acknowledge that:</p>
+            <ul>
+                <li>You have read and understood this disclaimer</li>
+                <li>You meet all eligibility requirements</li>
+                <li>You accept all risks associated with digital marketing</li>
+                <li>You understand the limitations of our services</li>
+                <li>You agree to these terms in their entirety</li>
+            </ul>
+            
+            <div class="legal-note">
+                <p><strong>Important:</strong> This disclaimer does not affect your statutory rights. Consult with legal professionals for specific advice regarding your situation.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% block extra_css %}
+<style>
+    .disclaimer-warning {
+        background: rgba(255, 68, 68, 0.1);
+        border: 2px solid #ff4444;
+        border-radius: 15px;
+        padding: 2rem;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    
+    .disclaimer-warning i {
+        font-size: 3rem;
+        color: #ff4444;
+        margin-bottom: 1rem;
+        display: block;
+    }
+    
+    .disclaimer-warning h3 {
+        color: #ff4444;
+        margin-bottom: 1rem;
+    }
+    
+    .disclaimer-warning p {
+        color: var(--gray);
+    }
+    
+    .legal-note {
+        background: rgba(255, 215, 0, 0.05);
+        border-left: 4px solid var(--gold-primary);
+        padding: 1.5rem;
+        border-radius: 0 10px 10px 0;
+        margin-top: 3rem;
+    }
+    
+    .legal-note p {
+        color: var(--gray);
+        margin: 0;
+        font-weight: 600;
+    }
+</style>
+{% endblock %}
+{% endblock %}

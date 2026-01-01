@@ -1,0 +1,658 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block content %}
+<section class="about-section">
+    <div class="container">
+        <h1 class="section-title">About MarketBrainers</h1>
+        <p class="section-subtitle">Unified Marketing Engine for the Digital Age</p>
+        
+        <!-- Company Overview -->
+        <div class="company-overview animate-on-scroll">
+            <div class="overview-content">
+                <h2>Global Marketing Powerhouse</h2>
+                <p>MarketBrainers is a unified marketing engine that combines digital reach, community power, trend intelligence, and global visibility into one powerful platform. We specialize in launching and scaling brands worldwide through strategic multi-channel campaigns.</p>
+                
+                <div class="overview-stats">
+                    <div class="stat">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Campaigns Delivered</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Global Partners</div>
+                    </div>
+                </div>
+            </div>
+            <div class="overview-image">
+                <img src="{% static 'images/team/team-about.png' %}" alt="MarketBrainers Team">
+            </div>
+        </div>
+        
+        <!-- Mission & Vision -->
+        <div class="mission-vision animate-on-scroll">
+            <div class="mission-card">
+                <div class="card-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h3>Our Mission</h3>
+                <p>To unify digital reach, community power, trend intelligence, and global visibility into one powerful marketing engine that launches and scales brands worldwide.</p>
+            </div>
+            
+            <div class="vision-card">
+                <div class="card-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h3>Our Vision</h3>
+                <p>To become the world's leading unified marketing platform, providing seamless access to global visibility and community engagement for brands of all sizes.</p>
+            </div>
+        </div>
+        
+        <!-- Core Values -->
+        <div class="values-section animate-on-scroll">
+            <h2 class="section-title">Core Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h4>Transparency</h4>
+                    <p>Clear communication and honest reporting at every campaign stage</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h4>No Forced Affiliations</h4>
+                    <p>Authentic partnerships based on mutual value and strategic fit</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h4>Platform Balance</h4>
+                    <p>Strategic distribution across multiple platforms for optimal reach</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h4>Global Execution</h4>
+                    <p>Worldwide campaign deployment with local market expertise</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h4>Private Coordination</h4>
+                    <p>Confidential campaign management and secure execution</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h4>Unified Infrastructure</h4>
+                    <p>Integrated marketing systems for seamless campaign execution</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h4>18+ Client Focus</h4>
+                    <p>Professional services exclusively for legitimate business entities</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Leadership -->
+        <div class="leadership-section animate-on-scroll">
+            <h2 class="section-title">Leadership Team</h2>
+            <div class="leadership-grid">
+                <div class="leader-card">
+                    <div class="leader-avatar">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>Philip Emmanuel</h3>
+                    <p class="leader-role">Chief Executive Officer (CEO)</p>
+                    <p class="leader-bio">Visionary leader with 10+ years in digital marketing and blockchain technology. Drives strategic direction and global expansion.</p>
+                </div>
+                
+                <div class="leader-card">
+                    <div class="leader-avatar">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Nwabuko Emmanuel</h3>
+                    <p class="leader-role">Co-Founder (CFO)</p>
+                    <p class="leader-bio">Financial strategist specializing in campaign ROI optimization and scalable business models for digital marketing.</p>
+                </div>
+            </div>
+        </div>
+        <div class="leader-card">
+            <div class="leader-avatar">
+                <i class="fas fa-code"></i>
+            </div>
+            <h3>Joseph Edward</h3>
+            <p class="leader-role">Lead Developer</p>
+            <div class="leader-skills">
+                <span class="skill-tag">Python/Django</span>
+                <span class="skill-tag">HTML/CSS</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">React/Next.js</span>
+                <span class="skill-tag">Tailwind CSS</span>
+            </div>
+            <p class="leader-bio">Full-stack developer with 4+ years experience building scalable web applications. Specializes in creating responsive, high-performance platforms with modern frameworks.</p>
+        </div>
+        
+        <!-- Why Choose Us -->
+        <div class="why-choose-section animate-on-scroll">
+            <h2 class="section-title">Why Choose MarketBrainers</h2>
+            <div class="advantages-grid">
+                <div class="advantage">
+                    <div class="advantage-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h4>Unified Engine</h4>
+                    <p>Single platform for all marketing needs - no multiple agencies required</p>
+                </div>
+                
+                <div class="advantage">
+                    <div class="advantage-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h4>Rapid Deployment</h4>
+                    <p>Quick campaign setup and execution across 500+ platforms</p>
+                </div>
+                
+                <div class="advantage">
+                    <div class="advantage-icon">
+                        <i class="fas fa-chart-network"></i>
+                    </div>
+                    <h4>Multi-Platform Access</h4>
+                    <p>Direct relationships with aggregators, exchanges, and media platforms</p>
+                </div>
+                
+                <div class="advantage">
+                    <div class="advantage-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Secure Coordination</h4>
+                    <p>Private campaign management with confidential execution</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cta-container" style="text-align: center; margin-top: 4rem;">
+            <a href="{% url 'contact' %}" class="btn-gold btn-xlarge">
+                <i class="fas fa-handshake"></i> Partner With Us
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .about-section {
+        padding: 5rem 2rem;
+        background: var(--black-primary);
+    }
+    
+    .company-overview {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+        margin-bottom: 5rem;
+    }
+    
+    .overview-content h2 {
+        color: var(--gold-primary);
+        font-family: 'Orbitron', sans-serif;
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .overview-content p {
+        color: var(--gray);
+        line-height: 1.6;
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+    }
+    
+    .overview-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .overview-stats .stat {
+        text-align: center;
+        padding: 1.5rem;
+        background: rgba(255, 215, 0, 0.05);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 215, 0, 0.1);
+    }
+    
+    .overview-stats .stat-number {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--gold-primary);
+        margin-bottom: 0.5rem;
+    }
+    
+    .overview-stats .stat-label {
+        color: var(--gray);
+        font-size: 0.9rem;
+    }
+    
+    .overview-image {
+        border-radius: 15px;
+        overflow: hidden;
+        border: 2px solid rgba(255, 215, 0, 0.3);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+    
+    .overview-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    .mission-vision {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 5rem;
+    }
+    
+    .mission-card, .vision-card {
+        padding: 3rem;
+        background: rgba(26, 26, 26, 0.8);
+        border-radius: 15px;
+        border: 1px solid rgba(255, 215, 0, 0.1);
+        text-align: center;
+    }
+    
+    .mission-card {
+        border-left: 4px solid var(--gold-primary);
+    }
+    
+    .vision-card {
+        border-right: 4px solid var(--gold-primary);
+    }
+    
+    .card-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 1.5rem;
+        background: rgba(255, 215, 0, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid var(--gold-primary);
+    }
+    
+    .card-icon i {
+        font-size: 2.5rem;
+        color: var(--gold-primary);
+    }
+    
+    .mission-card h3, .vision-card h3 {
+        color: var(--white);
+        margin-bottom: 1rem;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+    
+    .mission-card p, .vision-card p {
+        color: var(--gray);
+        line-height: 1.6;
+    }
+    
+    .values-section {
+        margin-bottom: 5rem;
+    }
+    
+    .values-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+    
+    .value-card {
+        text-align: center;
+        padding: 2rem;
+        background: rgba(26, 26, 26, 0.8);
+        border-radius: 15px;
+        border: 1px solid rgba(255, 215, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .value-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--gold-primary);
+    }
+    
+    .value-icon {
+        width: 70px;
+        height: 70px;
+        margin: 0 auto 1.5rem;
+        background: rgba(255, 215, 0, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .value-icon i {
+        font-size: 2rem;
+        color: var(--gold-primary);
+    }
+    
+    .value-card h4 {
+        color: var(--white);
+        margin-bottom: 1rem;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+    }
+    
+    .value-card p {
+        color: var(--gray);
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .leadership-section {
+        margin-bottom: 5rem;
+    }
+    
+    .leadership-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+    
+    .leader-card {
+        text-align: center;
+        padding: 3rem;
+        background: rgba(26, 26, 26, 0.8);
+        border-radius: 15px;
+        border: 1px solid rgba(255, 215, 0, 0.1);
+    }
+    
+    .leader-avatar {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 1.5rem;
+        background: rgba(255, 215, 0, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid var(--gold-primary);
+    }
+    
+    .leader-avatar i {
+        font-size: 3rem;
+        color: var(--gold-primary);
+    }
+    
+    .leader-card h3 {
+        color: var(--white);
+        margin-bottom: 0.5rem;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+    
+    .leader-role {
+        color: var(--gold-primary);
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+    
+    .leader-bio {
+        color: var(--gray);
+        line-height: 1.6;
+    }
+    
+    .why-choose-section {
+        margin-bottom: 3rem;
+    }
+    
+    .advantages-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+    
+    .advantage {
+        text-align: center;
+        padding: 2rem;
+        background: rgba(26, 26, 26, 0.8);
+        border-radius: 15px;
+        border: 1px solid rgba(255, 215, 0, 0.1);
+    }
+    
+    .advantage-icon {
+        width: 70px;
+        height: 70px;
+        margin: 0 auto 1.5rem;
+        background: rgba(255, 215, 0, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .advantage-icon i {
+        font-size: 2rem;
+        color: var(--gold-primary);
+    }
+    
+    .advantage h4 {
+        color: var(--white);
+        margin-bottom: 1rem;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+    }
+    
+    .advantage p {
+        color: var(--gray);
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    @media (max-width: 992px) {
+        .company-overview {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+        
+        .overview-stats {
+            justify-content: center;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .overview-stats {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .mission-vision {
+            grid-template-columns: 1fr;
+        }
+        
+        .values-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .overview-stats {
+            grid-template-columns: 1fr;
+        }
+        
+        .values-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .leadership-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .advantages-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .company-overview {
+            grid-template-columns: 1fr !important;
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .overview-stats {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 1rem;
+        }
+        
+        .mission-vision {
+            grid-template-columns: 1fr !important;
+        }
+        
+        .values-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 1rem;
+        }
+        
+        .leadership-grid {
+            grid-template-columns: 1fr !important;
+        }
+        
+        .advantages-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 1rem;
+        }
+        
+        .leader-card {
+            padding: 1.5rem !important;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .overview-stats {
+            grid-template-columns: 1fr !important;
+        }
+        
+        .values-grid {
+            grid-template-columns: 1fr !important;
+        }
+        
+        .advantages-grid {
+            grid-template-columns: 1fr !important;
+        }
+    }
+
+    /* Add to your about page CSS or custom.css */
+.leader-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 1rem 0;
+    justify-content: center;
+}
+
+.skill-tag {
+    background: rgba(255, 215, 0, 0.1);
+    color: var(--gold-primary);
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+/* Update experience stats in about page */
+.overview-stats .stat:nth-child(1) .stat-number {
+    content: "4+";
+}
+
+/* Make leadership grid responsive */
+@media (max-width: 768px) {
+    .leadership-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+    
+    .leader-card {
+        padding: 1.5rem !important;
+    }
+    
+    .leader-skills {
+        justify-content: center;
+        gap: 6px;
+    }
+    
+    .skill-tag {
+        font-size: 0.75rem;
+        padding: 3px 8px;
+    }
+}
+
+/* Add expertise section to about page */
+.expertise-section {
+    margin: 4rem 0;
+    padding: 2rem;
+    background: rgba(255, 215, 0, 0.05);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.expertise-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(26, 26, 26, 0.8);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.expertise-item i {
+    font-size: 2rem;
+    color: var(--gold-primary);
+    margin-bottom: 1rem;
+}
+
+.expertise-item h4 {
+    color: var(--white);
+    margin-bottom: 0.5rem;
+}
+</style>
+{% endblock %}
