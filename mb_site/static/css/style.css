@@ -2109,3 +2109,186 @@ img {
         flex-shrink: 0;
     }
 }
+
+/* ============================
+   CEO/CFO BANNER FIX
+   Permanent solution for all devices
+   ============================ */
+
+/* Reset and base positioning */
+body {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+.leadership-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px; /* Fixed height */
+    background: linear-gradient(90deg, #B8860B, #DAA520);
+    color: #000000;
+    z-index: 9999;
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: 700;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Prevent overflow */
+    box-sizing: border-box;
+}
+
+.leadership-banner .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.leadership-banner span {
+    color: #000000;
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.3);
+    padding: 2px 10px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    white-space: nowrap;
+    line-height: 1.2;
+}
+
+/* Navbar positioning */
+.navbar {
+    position: fixed;
+    top: 40px; /* Exactly matches banner height */
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: var(--black-primary);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 0;
+}
+
+/* Main content adjustment */
+main {
+    padding-top: 120px; /* Banner height (40px) + Navbar height (approx 80px) */
+    min-height: calc(100vh - 120px);
+}
+
+/* Hero section adjustment for home page */
+.hero-section {
+    padding-top: 120px;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+    .leadership-banner {
+        height: 70px; /* Taller for stacked text */
+        font-size: 0.7rem;
+        padding: 5px 0;
+        flex-direction: column;
+    }
+    
+    .leadership-banner .container {
+        flex-direction: column;
+        gap: 5px;
+        padding: 0 10px;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    
+    .leadership-banner span {
+        padding: 3px 8px;
+        font-size: 0.65rem;
+        line-height: 1.1;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    
+    .navbar {
+        top: 70px; /* Match mobile banner height */
+    }
+    
+    main {
+        padding-top: 140px; /* Banner (70px) + Navbar (approx 70px) */
+    }
+    
+    .hero-section {
+        padding-top: 140px;
+    }
+    
+    /* Mobile menu adjustment */
+    .nav-menu {
+        max-height: calc(100vh - 70px);
+        top: 70px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    .leadership-banner {
+        height: 75px; /* Slightly taller for very small screens */
+    }
+    
+    .leadership-banner .container {
+        gap: 4px;
+        padding: 0 8px;
+    }
+    
+    .leadership-banner span {
+        font-size: 0.6rem;
+        padding: 2px 6px;
+    }
+    
+    .navbar {
+        top: 75px;
+    }
+    
+    main {
+        padding-top: 145px;
+    }
+    
+    .hero-section {
+        padding-top: 145px;
+    }
+}
+
+/* Preloader adjustment */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background: var(--black-primary);
+}
+
+/* Ensure no overlapping on specific pages */
+.services-section,
+.packages-section,
+.platforms-section,
+.case-studies-section,
+.about-section {
+    padding-top: 40px !important;
+}
+
+@media (max-width: 768px) {
+    .services-section,
+    .packages-section,
+    .platforms-section,
+    .case-studies-section,
+    .about-section {
+        padding-top: 30px !important;
+    }
+}
