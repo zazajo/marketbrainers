@@ -2082,22 +2082,27 @@ img {
 }
 
 @media (max-width: 768px) {
-    /* Reduce font size and adjust spacing */
     .logo-text {
-        font-size: 1.1rem !important;
-        letter-spacing: -0.5px;
-        white-space: nowrap;
-    }
-    
-    .logo-text-container {
-        max-width: 200px !important;
+        font-size: 1rem !important;
+        display: inline !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: auto !important;
+        max-width: none !important;
         overflow: visible !important;
     }
     
-    .nav-container {
-        padding: 10px 15px !important;
-        gap: 10px;
+    .logo-text-container {
+        display: inline-block !important;
+        width: auto !important;
+        max-width: none !important;
     }
+    
+    .logo {
+        flex-shrink: 1;
+        overflow: visible;
+    }
+
     
     .menu-toggle {
         min-width: 44px;
