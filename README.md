@@ -57,42 +57,7 @@ Features Implemented
 ✅ Service catalog with categorized offerings
 ✅ Contact forms and lead generation
 ✅ SEO-optimized pages
-📁 Project Structure
 
-text
-marketbrainers/
-│
-├── mb_site/                 # Django project
-│   ├── settings.py          # Project settings
-│   ├── urls.py             # URL routing
-│   └── wsgi.py             # WSGI configuration
-│
-├── core/                    # Main app
-│   ├── models.py           # Database models
-│   ├── views.py            # View functions
-│   ├── urls.py             # App URL routing
-│   └── templates/          # HTML templates
-│       ├── base.html       # Base template
-│       ├── home.html       # Homepage
-│       ├── services.html   # Services page
-│       ├── packages.html   # Packages page
-│       ├── platforms.html  # Platforms page
-│       ├── case_studies/   # Case studies
-│       ├── about.html      # About page
-│       └── contact.html    # Contact page
-│
-├── static/                  # Static files
-│   ├── css/
-│   │   ├── style.css       # Main stylesheet
-│   │   └── custom.css      # Custom styles
-│   ├── js/
-│   │   └── main.js         # JavaScript functions
-│   └── images/             # Images and logos
-│       ├── logos/
-│       ├── cases/
-│       └── features/
-│
-└── requirements.txt         # Python dependencies
 🚀 Getting Started
 
 Prerequisites
