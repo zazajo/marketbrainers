@@ -123,6 +123,8 @@ document.addEventListener('DOMContentLoaded', function() {
         menuToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
             menuToggle.classList.toggle('active');
+            document.querySelector('.navbar').classList.toggle('nav-open',
+                navMenu.classList.contains('active'));
             
             // Prevent body scroll when menu is open
             if (navMenu.classList.contains('active')) {
@@ -138,6 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
             link.addEventListener('click', function() {
                 navMenu.classList.remove('active');
                 menuToggle.classList.remove('active');
+                document.querySelector('.navbar').classList.remove('nav-open');
                 document.body.style.overflow = '';
             });
         });
@@ -149,11 +152,34 @@ document.addEventListener('DOMContentLoaded', function() {
                 !menuToggle.contains(event.target)) {
                 navMenu.classList.remove('active');
                 menuToggle.classList.remove('active');
+                document.querySelector('.navbar').classList.remove('nav-open');
                 document.body.style.overflow = '';
             }
         });
     }
     
+    // ========== STICKY NAVBAR STATE ==========
+    const navbar = document.querySelector('.navbar');
+
+    if (navbar) {
+        let navTicking = false;
+
+        function updateNavbarState() {
+            navbar.classList.toggle('scrolled', window.scrollY > 40);
+            navTicking = false;
+        }
+
+        window.addEventListener('scroll', function() {
+            if (!navTicking) {
+                window.requestAnimationFrame(updateNavbarState);
+                navTicking = true;
+            }
+        }, { passive: true });
+
+        // Set the correct state on load (e.g. restored scroll position)
+        updateNavbarState();
+    }
+
     // ========== SCROLL ANIMATIONS ==========
     const observerOptions = {
         root: null,
