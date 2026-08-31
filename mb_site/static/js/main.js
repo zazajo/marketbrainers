@@ -286,9 +286,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // ========== ACTIVE NAV LINK ON SCROLL ==========
+    // Page-level highlighting is rendered server-side in base.html. This only
+    // handles in-page anchor links (href="#section") and must never touch the
+    // page links, or it would clear the server-rendered active state.
     function updateActiveNavLink() {
         const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav-link');
+        const anchorLinks = document.querySelectorAll('.nav-link[href^="#"]');
+        
+        if (!sections.length || !anchorLinks.length) {
+            return;
+        }
         
         let currentSection = '';
         let scrollPosition = window.scrollY + 100;
@@ -303,14 +310,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            const href = link.getAttribute('href');
-            
-            if (href === `#${currentSection}` || 
-                (currentSection === '' && (href === '/' || href === '#home'))) {
-                link.classList.add('active');
-            }
+        anchorLinks.forEach(link => {
+            link.classList.toggle('active',
+                link.getAttribute('href') === `#${currentSection}`);
         });
     }
     
