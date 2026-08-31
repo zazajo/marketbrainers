@@ -438,6 +438,10 @@ main {
     color: var(--gold-primary);
 }
 
+.nav-overlay {
+    display: none;
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
     .nav-menu {
@@ -452,25 +456,6 @@ main {
 @media (max-width: 768px) {
     .menu-toggle {
         display: flex;
-    }
-    
-    .nav-menu {
-        position: fixed;
-        top: 70px;
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 70px);
-        background-color: rgba(10, 10, 10, 0.98);
-        backdrop-filter: blur(20px);
-        flex-direction: column;
-        justify-content: flex-start;
-        padding-top: 2rem;
-        transition: var(--transition);
-        z-index: 999;
-    }
-    
-    .nav-menu.active {
-        left: 0;
     }
     
     .nav-link {
@@ -1996,6 +1981,17 @@ img {
     .navbar {
         position: sticky;
         top: 0;
+        /* No backdrop-filter here: it would make .navbar the containing block
+           for the fixed drawer, pinning the drawer to the bar. */
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        background-color: rgba(10, 10, 10, 0.92);
+    }
+    
+    .navbar.scrolled {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        background-color: rgba(10, 10, 10, 0.97);
     }
     
     .nav-container {
@@ -2045,25 +2041,38 @@ img {
         transition: 0.3s;
     }
     
-    /* Fix nav menu for mobile */
+    /* Mobile drawer. The navbar drops its backdrop-filter above, otherwise
+       it would become the containing block for this fixed element and the
+       drawer would travel with the bar instead of the viewport. */
     .nav-menu {
         position: fixed;
         top: 0;
-        right: -100%;
+        right: 0;
         width: 80%;
-        max-width: 300px;
+        max-width: 320px;
         height: 100vh;
+        height: 100dvh;
         background: var(--black-primary);
+        border-left: 1px solid rgba(255, 215, 0, 0.15);
         padding-top: 80px;
-        transition: 0.3s;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
         z-index: 1000;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+        box-shadow: -8px 0 24px rgba(0, 0, 0, 0.45);
         display: flex;
         flex-direction: column;
     }
     
     .nav-menu.active {
-        right: 0;
+        transform: translateX(0);
+    }
+    
+    @media (prefers-reduced-motion: reduce) {
+        .nav-menu {
+            transition: none;
+        }
     }
     
     .nav-menu .nav-link {
@@ -2079,7 +2088,10 @@ img {
     
     /* Overlay when menu is open */
     .nav-overlay {
-        display: none;
+        display: block;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
         position: fixed;
         top: 0;
         left: 0;
@@ -2090,7 +2102,8 @@ img {
     }
     
     .nav-overlay.active {
-        display: block;
+        opacity: 1;
+        pointer-events: auto;
     }
 }
 

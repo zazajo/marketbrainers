@@ -120,40 +120,61 @@ document.addEventListener('DOMContentLoaded', function() {
     const navMenu = document.getElementById('navMenu');
     
     if (menuToggle && navMenu) {
-        menuToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-            document.querySelector('.navbar').classList.toggle('nav-open',
-                navMenu.classList.contains('active'));
-            
-            // Prevent body scroll when menu is open
-            if (navMenu.classList.contains('active')) {
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = '';
+        const navOverlay = document.getElementById('navOverlay');
+        const navBar = document.querySelector('.navbar');
+        
+        function setMenu(open) {
+            navMenu.classList.toggle('active', open);
+            menuToggle.classList.toggle('active', open);
+            menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            if (navOverlay) {
+                navOverlay.classList.toggle('active', open);
             }
+            if (navBar) {
+                navBar.classList.toggle('nav-open', open);
+            }
+            // Prevent body scroll while the drawer is open
+            document.body.style.overflow = open ? 'hidden' : '';
+        }
+        
+        function isOpen() {
+            return navMenu.classList.contains('active');
+        }
+        
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Toggle navigation menu');
+        
+        menuToggle.addEventListener('click', function(event) {
+            event.stopPropagation();
+            setMenu(!isOpen());
         });
         
         // Close menu when clicking on a link
-        const navLinks = document.querySelectorAll('.nav-link');
-        navLinks.forEach(link => {
+        document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', function() {
-                navMenu.classList.remove('active');
-                menuToggle.classList.remove('active');
-                document.querySelector('.navbar').classList.remove('nav-open');
-                document.body.style.overflow = '';
+                setMenu(false);
             });
         });
         
-        // Close menu when clicking outside
+        // Close when tapping the dimmer or anywhere outside the drawer
         document.addEventListener('click', function(event) {
-            if (navMenu.classList.contains('active') && 
-                !navMenu.contains(event.target) && 
-                !menuToggle.contains(event.target)) {
-                navMenu.classList.remove('active');
-                menuToggle.classList.remove('active');
-                document.querySelector('.navbar').classList.remove('nav-open');
-                document.body.style.overflow = '';
+            if (isOpen() && !navMenu.contains(event.target)) {
+                setMenu(false);
+            }
+        });
+        
+        // Close on Escape
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && isOpen()) {
+                setMenu(false);
+                menuToggle.focus();
+            }
+        });
+        
+        // Reset state if the viewport grows past the mobile breakpoint
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768 && isOpen()) {
+                setMenu(false);
             }
         });
     }
